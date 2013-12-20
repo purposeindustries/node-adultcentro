@@ -1,0 +1,30 @@
+{
+  "name": "adultcentro",
+  "version": "0.0.0",
+  "description": "api wrapper for adultcentro",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purposeindustries/node-adultcentro.git"
+  },
+  "keywords": [
+    "adultcentro",
+    "ac"
+  ],
+  "author": "oroce <robert@oroszi.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/purposeindustries/node-adultcentro/issues"
+  },
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "request": "~2.30.0"
+  },
+  "devDependencies": {
+    "nock": "~0.27.0",
+    "mocha": "~1.16.1"
+  }
+}
