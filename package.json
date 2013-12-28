@@ -1,6 +1,6 @@
 {
   "name": "adultcentro",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "api wrapper for adultcentro",
   "main": "index.js",
   "scripts": {
