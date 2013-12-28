@@ -24,7 +24,8 @@
     "request": "~2.30.0"
   },
   "devDependencies": {
-    "nock": "~0.27.0",
-    "mocha": "~1.16.1"
+    "nock": "~0.27.1",
+    "mocha": "~1.16.1",
+    "should": "~2.1.1"
   }
 }
