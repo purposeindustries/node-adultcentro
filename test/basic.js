@@ -65,4 +65,48 @@ describe( "Testing AdultCentro klass", function(){
       });
     }).should.not.throwErorr;
   });
+
+  it( "should save alias, which passed in constructor", function(){
+    var client = new AdultCentro({
+      user: "foofoo",
+      hash: "foo",
+      baseUrl: "bar",
+      password: "foobar",
+      alias: "alias"
+    });
+
+    client.alias.should.eql( "alias" );
+  });
+});
+
+describe( "testing url signing", function(){
+  beforeEach(function(){
+    this.client = new AdultCentro({
+      user: "foobaruser",
+      hash: "foobarhash",
+      baseUrl: "http://example.com",
+      password: "foobarpassword"
+    });
+  });
+
+  it( "should sign video link", function(){
+    var link = "http://example.com/video-link";
+    var expiration = new Date( "2013-12-31T15:18:22.438Z" ).getTime();
+
+    var signed = this.client.signVideo( link, {
+      expiration: expiration
+    });
+    signed.should.eql( "http://example.com/video-link?till=1388503102438&hash=89ba42734c710e30968ce952e4970c1d" );
+  });
+
+  it( "should sign video link with alias", function(){
+    this.client.alias = "foobaralias";
+    var link = "http://example.com/video-link";
+    var expiration = new Date( "2013-12-31T15:18:22.438Z" ).getTime();
+
+    var signed = this.client.signVideo( link, {
+      expiration: expiration
+    });
+    signed.should.eql( "http://example.com/video-link?till=1388503102438&alias=foobaralias&hash=9731f1463ea884884369890cf6065891" );
+  });
 });
