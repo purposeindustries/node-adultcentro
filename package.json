@@ -4,7 +4,8 @@
   "description": "api wrapper for adultcentro",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "mocha test/*.js",
+    "test-w": "mocha -w test/*.js"
   },
   "repository": {
     "type": "git",
