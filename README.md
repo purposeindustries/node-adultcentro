@@ -1,4 +1,4 @@
 node-adultcentro
 ================
 
-(Adultcentro)[http://www.adultcentro.com] api wrapper.
+[Adultcentro](http://www.adultcentro.com) api wrapper.
